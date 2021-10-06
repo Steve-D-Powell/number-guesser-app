@@ -12,6 +12,7 @@ import Card from "../components/Card";
 import Input from "../components/Input";
 import Colors from "../constants/Colors";
 import NumberContainer from "../components/NumberContainer";
+import DefaultStyles from "../constants/Default-Styles";
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -65,9 +66,8 @@ const StartGameScreen = (props) => {
       }}
     >
       <View style={styles.screen}>
-        <Text style={{ marginVertical: 15 }}>Start a New Game</Text>
         <Card style={styles.inputContainer}>
-          <Text style={styles.title}>Select a Number</Text>
+          <Text style={{...styles.title, ...DefaultStyles.header}}>Select a Number</Text>
           <Input
             keyboardType="number-pad"
             maxLength={2}
@@ -105,7 +105,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 20,
     marginVertical: 10,
   },
   inputContainer: {
