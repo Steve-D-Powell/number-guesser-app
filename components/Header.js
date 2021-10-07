@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: Colors.primary,
+    fontFamily: 'open-sans-bold'
   },
   headerTitle: {
     color: "white",
